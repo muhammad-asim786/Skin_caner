@@ -1,4 +1,5 @@
 import 'package:canecer_scan/core/constant/color.dart';
+import 'package:canecer_scan/screens/cancer_type_details_screen/cancer_type_details_screen.dart';
 import 'package:canecer_scan/screens/widgets/cancer_card_horizantol_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -62,7 +63,13 @@ class MyBodyScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 20.h),
                   GestureDetector(
-                    onTap: () => Get.to(() => const ViewAllScreen()),
+                    onTap: () {
+                      Get.to(
+                        () => const ViewAllScreen(),
+                        transition: Transition.rightToLeft,
+                        duration: const Duration(milliseconds: 500),
+                      );
+                    },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -98,11 +105,22 @@ class MyBodyScreen extends StatelessWidget {
                 shrinkWrap: true,
                 itemCount: cancerTypes.length,
                 itemBuilder: (context, index) {
-                  return CanerHorizantolCard(
-                    image: cancerTypes[index].image.first,
-                    name: cancerTypes[index].name,
-                    description: cancerTypes[index].description,
-                    recipeIndex: index,
+                  return InkWell(
+                    onTap: () {
+                      Get.to(
+                        () => CancerTypeDetailsScreen(
+                          cancerType: cancerTypes[index],
+                        ),
+                        transition: Transition.rightToLeft,
+                        duration: const Duration(milliseconds: 500),
+                      );
+                    },
+                    child: CanerHorizantolCard(
+                      image: cancerTypes[index].image.first,
+                      name: cancerTypes[index].name,
+                      description: cancerTypes[index].description,
+                      recipeIndex: index,
+                    ),
                   );
                 },
               ),

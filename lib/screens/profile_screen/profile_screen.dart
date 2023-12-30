@@ -1,6 +1,7 @@
 import 'package:canecer_scan/core/constant/color.dart';
 import 'package:canecer_scan/core/utils/utils.dart';
 import 'package:canecer_scan/screens/change_password_screen/change_password_screen.dart';
+import 'package:canecer_scan/screens/privacy_policy_screen/pricacy_policy_screen.dart';
 import 'package:canecer_scan/screens/profile_details_screen/profile_details_screen.dart';
 import 'package:canecer_scan/screens/profile_screen/profile_model.dart';
 import 'package:canecer_scan/screens/widgets/custom_text.dart';
@@ -41,7 +42,7 @@ class ProfileScreen extends StatelessWidget {
                         } else if (index == 3) {
                           // Add your edit functionality here
                         } else if (index == 4) {
-                          // Add your edit functionality here
+                          Get.to(() => const PrivacyPolicyPage());
                         } else if (index == 5) {
                           Get.to(() => const ChangePasswordScreen());
                         } else if (index == 6) {
