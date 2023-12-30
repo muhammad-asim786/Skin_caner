@@ -1,3 +1,4 @@
+import 'package:canecer_scan/screens/change_password_screen/change_model_model.dart';
 import 'package:canecer_scan/screens/home_screen/home_model.dart';
 import 'package:canecer_scan/screens/profile_screen/profile_model.dart';
 import 'package:provider/provider.dart';
@@ -16,5 +17,7 @@ List<SingleChildWidget> providers = [
   ChangeNotifierProvider<ProfileDeteilModel>(
       create: (_) => ProfileDeteilModel()),
   ChangeNotifierProvider<DeleteAccountModel>(
-      create: (_) => DeleteAccountModel())
+      create: (_) => DeleteAccountModel()),
+  ChangeNotifierProvider<ChangePasswordModel>(
+      create: (_) => ChangePasswordModel()),
 ];

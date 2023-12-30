@@ -6,10 +6,10 @@ class ProfileModel extends ChangeNotifier {
     'My Profile',
     'Skin Type',
     'Risk Profile',
-    'Reminder and notifications',
-    'Reminder and notifications',
-    'Reminder and notifications',
-    'Reminder and notifications',
+    'Terms of Conditions',
+    'Privacy Policy',
+    'Change Password',
     'Delete Account',
+    'Sign Out',
   ];
 }

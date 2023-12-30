@@ -13,9 +13,11 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final model = Provider.of<HomeViewModel>(context);
     return Scaffold(
+        backgroundColor: greyColor,
         appBar: AppBar(
+          automaticallyImplyLeading: false,
+          centerTitle: true,
           elevation: 2,
-          backgroundColor: whiteColor,
           title: CustomText(
               text: model.titles[model.currentIndex],
               color: blackColor,

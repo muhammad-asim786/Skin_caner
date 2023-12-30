@@ -16,7 +16,7 @@ class MyBodyScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: whiteColor,
+      backgroundColor: greyColor,
       body: SingleChildScrollView(
         child: Column(
           children: [

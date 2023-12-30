@@ -17,22 +17,27 @@ class DeleAccountScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final model = Provider.of<DeleteAccountModel>(context);
     return Scaffold(
+      backgroundColor: greyColor,
       appBar: AppBar(
+        centerTitle: true,
         leading: IconButton(
             onPressed: () => Get.back(),
-            icon: const Icon(
-              Icons.arrow_back_ios,
-              color: blackColor,
-            )),
-        backgroundColor: whiteColor,
-        title: const CustomText(text: 'Delete Account', color: blackColor),
-        elevation: 0,
+            icon: const Icon(Icons.arrow_back_ios, color: blackColor)),
+        elevation: 2,
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizedBox(height: 20.h),
+            Center(
+                child: CustomText(
+              text: 'Delete Account',
+              color: primaryColor,
+              fontSize: 25.sp,
+              fontWeight: FontWeight.bold,
+            )),
             SizedBox(height: 20.h),
             CustomText(
                 maxLines: 2,
