@@ -33,9 +33,9 @@ class SignInScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 80.h),
-            FadeAnimation(0.7, const CustomTextField(hintText: 'Email')),
+            const FadeAnimation(0.7, CustomTextField(hintText: 'Email')),
             SizedBox(height: 60.h),
-            FadeAnimation(0.7, const CustomTextField(hintText: 'Password')),
+            const FadeAnimation(0.7, CustomTextField(hintText: 'Password')),
             SizedBox(height: 20.h),
             GestureDetector(
               onTap: () => Get.to(() => const ForgotpasswordScreen()),

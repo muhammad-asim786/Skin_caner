@@ -49,10 +49,10 @@ class ForgotpasswordScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 60.h),
-              FadeAnimation(
-                  0.7, const CustomTextField(hintText: 'Enter Email')),
+              const FadeAnimation(
+                  0.7, CustomTextField(hintText: 'Enter Email')),
               SizedBox(height: 60.h),
-              FadeAnimation(0.9, const DefaultButton(text: 'Send Code')),
+              const FadeAnimation(0.9, DefaultButton(text: 'Send Code')),
               SizedBox(height: 60.h),
               Align(
                 alignment: Alignment.bottomCenter,

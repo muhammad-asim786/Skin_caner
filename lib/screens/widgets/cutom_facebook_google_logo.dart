@@ -41,7 +41,7 @@ class ContainerRowWithShadowedImages extends StatelessWidget {
 class ShadowedContainer extends StatelessWidget {
   final Widget child;
 
-  ShadowedContainer({required this.child});
+  const ShadowedContainer({super.key, required this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +56,7 @@ class ShadowedContainer extends StatelessWidget {
             color: Colors.grey.withOpacity(0.3),
             spreadRadius: 5,
             blurRadius: 7,
-            offset: Offset(0, 3),
+            offset: const Offset(0, 3),
           ),
         ],
       ),

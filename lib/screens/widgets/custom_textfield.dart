@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:canecer_scan/core/constant/color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -45,7 +47,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
           borderSide: BorderSide(color: borderColor),
           borderRadius: BorderRadius.circular(10.r),
         ),
-        contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 16.0),
+        contentPadding:
+            const EdgeInsets.symmetric(vertical: 10.0, horizontal: 16.0),
       ),
     );
   }
