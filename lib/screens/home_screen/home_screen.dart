@@ -57,11 +57,15 @@ class HomeScreen extends StatelessWidget {
             type: BottomNavigationBarType.fixed,
             items: [
               BottomNavigationBarItem(
-                  icon: Image.asset(myBody, height: 26.h, width: 26.w),
+                  icon: model.currentIndex == 0
+                      ? Image.asset(myBody, height: 26.h, width: 26.w)
+                      : Image.asset(profileGrey, height: 26.h, width: 26.w),
                   tooltip: 'My Body',
                   label: 'My Body'),
               BottomNavigationBarItem(
-                  icon: Image.asset(uvIndex, height: 26.h, width: 26.w),
+                  icon: model.currentIndex == 1
+                      ? Image.asset(uvIndexPurple, height: 26.h, width: 26.w)
+                      : Image.asset(uvIndex, height: 26.h, width: 26.w),
                   tooltip: 'UV Index',
                   label: 'UV Index'),
               const BottomNavigationBarItem(
@@ -69,11 +73,15 @@ class HomeScreen extends StatelessWidget {
                   tooltip: 'Camera',
                   label: 'Camera'),
               BottomNavigationBarItem(
-                  icon: Image.asset(message, height: 26.h, width: 26.w),
+                  icon: model.currentIndex == 3
+                      ? Image.asset(messagePurple, height: 26.h, width: 26.w)
+                      : Image.asset(message, height: 26.h, width: 26.w),
                   tooltip: 'Messages',
                   label: 'Messages'),
               BottomNavigationBarItem(
-                  icon: Image.asset(profile, height: 26.h, width: 26.w),
+                  icon: model.currentIndex == 4
+                      ? Image.asset(profilePurple, height: 26.h, width: 26.w)
+                      : Image.asset(profile, height: 26.h, width: 26.w),
                   tooltip: 'Profile',
                   label: 'Profile'),
             ],

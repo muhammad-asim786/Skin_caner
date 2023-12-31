@@ -23,13 +23,21 @@ const String profileIamge = '$staticImagePath/profileImage.png';
 const String greyImage = '$staticImagePath/greyContaier.png';
 
 // home images;
+// bottom navigation icons;
 const String profile = '$staticImagePath/profile.png';
+const String profilePurple = '$staticImagePath/profile_purple_icon.png';
 const String uvIndex = '$staticImagePath/uv_index.png';
+const String uvIndexPurple = '$staticImagePath/ui_index_purple_icon.png';
 const String myBody = '$staticImagePath/my_body.png';
+const String profileGrey = '$staticImagePath/body_icon_white.png';
 const String message = '$staticImagePath/message.png';
+const String messagePurple = '$staticImagePath/message_purpule_icon.png';
 const String camera = '$staticImagePath/camera.png';
+
+//
+//
 const String basaloneImage = '$staticImagePath/basal1.jpg';
-const String basalsecondImage = '$staticImagePath/camera.jpg';
+const String basalsecondImage = '$staticImagePath/basal2.jpg';
 const String situoneImage = '$staticImagePath/suti1.jpg';
 const String situsecondImage = '$staticImagePath/suti2.jpg';
 const String melonma = '$staticImagePath/melonma.jpg';
@@ -40,6 +48,8 @@ const String nonMelonamaImagesecond = '$staticImagePath/non_melonama 2.jpg';
 const String ocular = '$staticImagePath/ocular.jpg';
 const String squamousOne = '$staticImagePath/squamous 1.jpg';
 const String squamousSecond = '$staticImagePath/squamous 2.jpg';
+const String skletonFrontImage = '$staticImagePath/skeleton_front.png';
+const String skletonBackImage = '$staticImagePath/skeleton_back.png';
 
 // uv index images;
 const String sun = '$staticImagePath/sun.png';
@@ -47,4 +57,5 @@ const String sun = '$staticImagePath/sun.png';
 // my body images;
 const String body = '$staticImagePath/body.png';
 const String menu = '$staticImagePath/menu.png';
+const String menuGrey = '$staticImagePath/menu_grey_icon.png';
 const String skinImage = '$staticImagePath/skinImage.png';
