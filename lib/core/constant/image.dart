@@ -59,3 +59,4 @@ const String body = '$staticImagePath/body.png';
 const String menu = '$staticImagePath/menu.png';
 const String menuGrey = '$staticImagePath/menu_grey_icon.png';
 const String skinImage = '$staticImagePath/skinImage.png';
+const String loadingGif = '$staticImagePath/loading.gif';

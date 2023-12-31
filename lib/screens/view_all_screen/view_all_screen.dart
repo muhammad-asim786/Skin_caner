@@ -39,8 +39,12 @@ class ViewAllScreen extends StatelessWidget {
                       itemBuilder: (context, index) {
                         CancerType cancerType = cancerTypes[index];
                         return CancerVerticleCard(
-                          onTap: () => Get.to(() =>
-                              CancerTypeDetailsScreen(cancerType: cancerType)),
+                          onTap: () => Get.to(
+                            () =>
+                                CancerTypeDetailsScreen(cancerType: cancerType),
+                            transition: Transition.rightToLeft,
+                            duration: const Duration(milliseconds: 500),
+                          ),
                           image: cancerTypes[index].image.first,
                           name: cancerTypes[index].name,
                           description: cancerTypes[index].description,

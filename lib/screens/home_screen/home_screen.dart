@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
         floatingActionButton: FloatingActionButton(
           tooltip: 'Camera',
           backgroundColor: purpulColor,
-          onPressed: () {},
+          onPressed: () => model.changeCamera(),
           child: Image.asset(camera, height: 26, width: 26),
         ),
         bottomNavigationBar: Container(

@@ -30,11 +30,13 @@ class ProfileScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     InkWell(
-                      splashColor: primaryColor.withOpacity(0.2),
-                      borderRadius: BorderRadius.circular(5.r),
                       onTap: () {
                         if (index == 0) {
-                          Get.to(() => const ProfileDetailsScreen());
+                          Get.to(
+                            () => const ProfileDetailsScreen(),
+                            transition: Transition.rightToLeft,
+                            duration: const Duration(milliseconds: 500),
+                          );
                         } else if (index == 1) {
                           // Add your edit functionality here
                         } else if (index == 2) {
@@ -42,11 +44,23 @@ class ProfileScreen extends StatelessWidget {
                         } else if (index == 3) {
                           // Add your edit functionality here
                         } else if (index == 4) {
-                          Get.to(() => const PrivacyPolicyPage());
+                          Get.to(
+                            () => const PrivacyPolicyPage(),
+                            transition: Transition.rightToLeft,
+                            duration: const Duration(milliseconds: 500),
+                          );
                         } else if (index == 5) {
-                          Get.to(() => const ChangePasswordScreen());
+                          Get.to(
+                            () => const ChangePasswordScreen(),
+                            transition: Transition.rightToLeft,
+                            duration: const Duration(milliseconds: 500),
+                          );
                         } else if (index == 6) {
-                          Get.to(() => const DeleAccountScreen());
+                          Get.to(
+                            () => const DeleAccountScreen(),
+                            transition: Transition.rightToLeft,
+                            duration: const Duration(milliseconds: 500),
+                          );
                         } else if (index == 7) {
                           Utils.showAlertDialog(
                               context, 'Are you sure to lougout?', 'Logout',

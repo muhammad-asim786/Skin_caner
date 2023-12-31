@@ -44,7 +44,7 @@ class BodySktechScreen extends StatelessWidget {
                             child: Center(
                               child: CustomText(
                                 text: 'Front',
-                                color: blackColor,
+                                color: !model.isFront ? blackColor : whiteColor,
                                 fontSize: 15.sp,
                                 fontWeight: FontWeight.normal,
                               ),
@@ -54,7 +54,6 @@ class BodySktechScreen extends StatelessWidget {
                         InkWell(
                           onTap: () => model.changeCamera(false),
                           child: Container(
-                            // height: 40,
                             width: 100.h,
                             decoration: BoxDecoration(
                                 color: !model.isFront
@@ -64,7 +63,7 @@ class BodySktechScreen extends StatelessWidget {
                             child: Center(
                               child: CustomText(
                                 text: 'Back',
-                                color: blackColor,
+                                color: model.isFront ? blackColor : whiteColor,
                                 fontSize: 15.sp,
                                 fontWeight: FontWeight.normal,
                               ),
