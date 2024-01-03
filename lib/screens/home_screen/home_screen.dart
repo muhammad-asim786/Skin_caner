@@ -26,11 +26,14 @@ class HomeScreen extends StatelessWidget {
         ),
         body: HomeViewModel.widgetOptions[model.currentIndex],
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: FloatingActionButton(
-          tooltip: 'Camera',
-          backgroundColor: purpulColor,
-          onPressed: () => model.changeCamera(),
-          child: Image.asset(camera, height: 26, width: 26),
+        floatingActionButton: ClipRRect(
+          borderRadius: BorderRadius.circular(40.r),
+          child: FloatingActionButton(
+            tooltip: 'Camera',
+            backgroundColor: purpulColor,
+            onPressed: () => model.changeCamera(),
+            child: Image.asset(camera, height: 26, width: 26),
+          ),
         ),
         bottomNavigationBar: Container(
           height: 85.h,

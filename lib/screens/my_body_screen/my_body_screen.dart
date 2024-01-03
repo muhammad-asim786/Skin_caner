@@ -112,7 +112,12 @@ class _MyBodyScreenState extends State<MyBodyScreen> {
                     )
                   ],
                 )
-              : Image.asset(loadingGif, width: 1.sw, fit: BoxFit.cover),
+              : Image.asset(
+                  loadingGif,
+                  width: 1.sw,
+                  height: 1.sh,
+                  fit: BoxFit.fill,
+                ),
         ),
       ),
     );
