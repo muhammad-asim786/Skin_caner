@@ -23,6 +23,7 @@ class RadioButton extends StatelessWidget {
         Stack(
           children: [
             InkWell(
+              borderRadius: BorderRadius.circular(50.r),
               onTap: onTap,
               child: Container(
                 decoration: BoxDecoration(

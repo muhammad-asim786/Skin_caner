@@ -1,6 +1,7 @@
 import 'package:canecer_scan/core/constant/color.dart';
 import 'package:canecer_scan/core/utils/utils.dart';
 import 'package:canecer_scan/screens/change_password_screen/change_password_screen.dart';
+import 'package:canecer_scan/screens/languages_screen/languages_screen.dart';
 import 'package:canecer_scan/screens/privacy_policy_screen/pricacy_policy_screen.dart';
 import 'package:canecer_scan/screens/profile_details_screen/profile_details_screen.dart';
 import 'package:canecer_scan/screens/profile_screen/profile_model.dart';
@@ -38,6 +39,11 @@ class ProfileScreen extends StatelessWidget {
                             duration: const Duration(milliseconds: 500),
                           );
                         } else if (index == 1) {
+                          Get.to(
+                            () => const LanguagesScreen(),
+                            transition: Transition.rightToLeft,
+                            duration: const Duration(milliseconds: 500),
+                          );
                           // Add your edit functionality here
                         } else if (index == 2) {
                           // Add your edit functionality here

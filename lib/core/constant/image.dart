@@ -33,6 +33,16 @@ const String profileGrey = '$staticImagePath/body_icon_white.png';
 const String message = '$staticImagePath/message.png';
 const String messagePurple = '$staticImagePath/message_purpule_icon.png';
 const String camera = '$staticImagePath/camera.png';
+const String languagesIcon = '$staticImagePath/language_icon.png';
+
+// gif of  languages screen;
+const String engFlag = '$staticImagePath/Eng_Flag.png';
+const String pakFlag = '$staticImagePath/Pakistan_Flag.png';
+const String indiaFlag = '$staticImagePath/India_Flag.png';
+const String sudiaFlag = '$staticImagePath/Sudia_Flag.png';
+const String spanFlag = '$staticImagePath/Spanish_Flag.png';
+const String franceFlag = '$staticImagePath/France_Flag.png';
+const String russFlag = '$staticImagePath/Russia_Flag.png';
 
 //
 //

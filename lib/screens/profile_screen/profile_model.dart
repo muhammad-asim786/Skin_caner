@@ -4,7 +4,7 @@ class ProfileModel extends ChangeNotifier {
   // Add your code here
   List<String> profileText = [
     'My Profile',
-    'Skin Type',
+    'Languages',
     'Risk Profile',
     'Terms of Conditions',
     'Privacy Policy',
