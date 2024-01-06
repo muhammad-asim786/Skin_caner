@@ -1,7 +1,7 @@
 import 'package:canecer_scan/core/constant/color.dart';
 import 'package:canecer_scan/core/constant/image.dart';
 import 'package:canecer_scan/screens/home_screen/home_model.dart';
-import 'package:canecer_scan/screens/widgets/custom_text.dart';
+import 'package:canecer_scan/screens/widgets/custom_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -14,15 +14,12 @@ class HomeScreen extends StatelessWidget {
     final model = Provider.of<HomeViewModel>(context);
     return Scaffold(
         backgroundColor: greyColor,
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          centerTitle: true,
-          elevation: 2,
-          title: CustomText(
-              text: model.titles[model.currentIndex],
-              color: blackColor,
-              fontSize: 20.sp,
-              fontWeight: FontWeight.bold),
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(60.h),
+          child: CustomAppBar(
+            title: model.titles[model.currentIndex],
+            isHomePage: true,
+          ),
         ),
         body: HomeViewModel.widgetOptions[model.currentIndex],
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -31,7 +28,7 @@ class HomeScreen extends StatelessWidget {
           child: FloatingActionButton(
             tooltip: 'Camera',
             backgroundColor: purpulColor,
-            onPressed: () => model.changeCamera(),
+            onPressed: () {},
             child: Image.asset(camera, height: 26, width: 26),
           ),
         ),

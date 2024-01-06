@@ -1,8 +1,7 @@
 import 'package:canecer_scan/core/constant/color.dart';
+import 'package:canecer_scan/screens/widgets/custom_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
 
 class PrivacyPolicyPage extends StatelessWidget {
   const PrivacyPolicyPage({super.key});
@@ -11,28 +10,15 @@ class PrivacyPolicyPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: greyColor,
-      appBar: AppBar(
-        centerTitle: true,
-        leading: IconButton(
-            onPressed: () => Get.back(),
-            icon: const Icon(Icons.arrow_back_ios, color: blackColor)),
-        elevation: 2,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(60.h),
+        child: const CustomAppBar(
+            title: 'Privacy Policy', isHomePage: false, color: primaryColor),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView(
           children: [
-            ListTile(
-              title: Center(
-                child: Text(
-                  'Privacy Policy',
-                  style: TextStyle(
-                      fontSize: 25.sp,
-                      fontWeight: FontWeight.bold,
-                      color: primaryColor),
-                ),
-              ),
-            ),
             SizedBox(height: 20.h),
             ListTile(
               title: Text(

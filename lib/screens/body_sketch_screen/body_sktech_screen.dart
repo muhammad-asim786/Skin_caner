@@ -19,7 +19,7 @@ class BodySktechScreen extends StatelessWidget {
               children: [
                 Image.asset(
                   !model.isFront ? skletonBackImage : skletonFrontImage,
-                  height: 450,
+                  height: 400,
                   fit: BoxFit.cover,
                 ),
                 Container(

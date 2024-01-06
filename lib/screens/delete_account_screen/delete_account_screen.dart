@@ -1,4 +1,5 @@
 import 'package:canecer_scan/core/constant/color.dart';
+import 'package:canecer_scan/screens/widgets/custom_appbar.dart';
 import 'package:canecer_scan/screens/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,27 +19,17 @@ class DeleAccountScreen extends StatelessWidget {
     final model = Provider.of<DeleteAccountModel>(context);
     return Scaffold(
       backgroundColor: greyColor,
-      appBar: AppBar(
-        centerTitle: true,
-        leading: IconButton(
-            onPressed: () => Get.back(),
-            icon: const Icon(Icons.arrow_back_ios, color: blackColor)),
-        elevation: 2,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(60.h),
+        child: const CustomAppBar(
+            title: 'Delete Account', isHomePage: false, color: primaryColor),
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 20.h),
-            Center(
-                child: CustomText(
-              text: 'Delete Account',
-              color: primaryColor,
-              fontSize: 25.sp,
-              fontWeight: FontWeight.bold,
-            )),
-            SizedBox(height: 20.h),
+            SizedBox(height: 50.h),
             CustomText(
                 maxLines: 2,
                 text: 'Are you sure you want to delete your account?',

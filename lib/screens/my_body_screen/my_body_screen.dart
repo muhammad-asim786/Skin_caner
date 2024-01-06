@@ -42,7 +42,7 @@ class _MyBodyScreenState extends State<MyBodyScreen> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               CircleAvatar(
-                                radius: 30.r,
+                                radius: 28.r,
                                 backgroundImage: const AssetImage(profileIamge),
                               ),
                               CustomText(
@@ -68,24 +68,35 @@ class _MyBodyScreenState extends State<MyBodyScreen> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
-                              InkWell(
-                                borderRadius: BorderRadius.circular(10.r),
-                                splashColor: primaryColor.withOpacity(0.5),
-                                onTap: () => model.changeCamera(),
-                                child: Image.asset(
-                                    model.isCamera ? profileGrey : myBody,
+                              Ink(
+                                decoration: const ShapeDecoration(
+                                    shape: CircleBorder()),
+                                child: IconButton(
+                                  onPressed: () => model.changeCamera(),
+                                  icon: Image.asset(
+                                    !model.isCamera ? profileGrey : myBody,
                                     height: 30.h,
-                                    width: 30.w),
+                                    width: 30.w,
+                                  ),
+                                  splashRadius:
+                                      35, // Adjust the splash radius as needed
+                                ),
                               ),
                               SizedBox(width: 15.w),
-                              InkWell(
-                                  splashColor: primaryColor.withOpacity(0.5),
-                                  borderRadius: BorderRadius.circular(5.r),
-                                  onTap: () => model.changeCamera(),
-                                  child: Image.asset(
-                                      model.isCamera ? menu : menuGrey,
-                                      height: 26.h,
-                                      width: 21.w)),
+                              Ink(
+                                decoration: const ShapeDecoration(
+                                    shape: CircleBorder()),
+                                child: IconButton(
+                                  onPressed: () => model.changeCamera(),
+                                  icon: Image.asset(
+                                    !model.isCamera ? menu : menuGrey,
+                                    height: 26.h,
+                                    width: 21.w,
+                                  ),
+                                  splashRadius:
+                                      30, // Adjust the splash radius as needed
+                                ),
+                              ),
                             ],
                           ),
                           SizedBox(height: 20.h),

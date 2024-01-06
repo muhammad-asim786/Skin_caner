@@ -1,6 +1,7 @@
 import 'package:canecer_scan/core/animation/fade_animation.dart';
 import 'package:canecer_scan/core/constant/image.dart';
 import 'package:canecer_scan/screens/profile_details_screen/profile_details_modle.dart';
+import 'package:canecer_scan/screens/widgets/custom_appbar.dart';
 import 'package:canecer_scan/screens/widgets/custom_button.dart';
 import 'package:canecer_scan/screens/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
@@ -24,16 +25,10 @@ class _ProfileDetailsScreenState extends State<ProfileDetailsScreen> {
   Widget build(BuildContext context) {
     final model = Provider.of<ProfileDeteilModel>(context);
     return Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          leading: IconButton(
-              onPressed: () => Get.back(),
-              icon: const Icon(
-                Icons.arrow_back_ios,
-                color: blackColor,
-              )),
-          // backgroundColor: greyColor,
-          elevation: 2,
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(60.h),
+          child: const CustomAppBar(
+              title: 'My Profile', isHomePage: false, color: primaryColor),
         ),
         backgroundColor: greyColor,
         body: SafeArea(
@@ -45,14 +40,6 @@ class _ProfileDetailsScreenState extends State<ProfileDetailsScreen> {
                   hasScrollBody: false,
                   child: Column(
                     children: [
-                      SizedBox(height: 20.h),
-                      Center(
-                          child: CustomText(
-                        text: 'My Profile',
-                        color: primaryColor,
-                        fontSize: 25.sp,
-                        fontWeight: FontWeight.bold,
-                      )),
                       SizedBox(height: 20.h),
                       Stack(
                         children: [

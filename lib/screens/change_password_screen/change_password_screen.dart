@@ -2,6 +2,7 @@
 
 import 'package:canecer_scan/core/constant/color.dart';
 import 'package:canecer_scan/screens/change_password_screen/change_model_model.dart';
+import 'package:canecer_scan/screens/widgets/custom_appbar.dart';
 import 'package:canecer_scan/screens/widgets/custom_text.dart';
 import 'package:canecer_scan/screens/widgets/custom_textfield.dart';
 import 'package:flutter/material.dart';
@@ -21,15 +22,10 @@ class ChangePasswordScreen extends StatelessWidget {
     final model = Provider.of<ChangePasswordModel>(context);
     return Scaffold(
       backgroundColor: greyColor,
-      appBar: AppBar(
-        centerTitle: true,
-        leading: IconButton(
-            onPressed: () => Get.back(),
-            icon: const Icon(
-              Icons.arrow_back_ios,
-              color: blackColor,
-            )),
-        elevation: 2,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(60.h),
+        child: const CustomAppBar(
+            title: 'Change Password', isHomePage: false, color: primaryColor),
       ),
       body: CustomScrollView(
         slivers: [
@@ -40,15 +36,7 @@ class ChangePasswordScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 40.h),
-                  Center(
-                      child: CustomText(
-                    text: 'Change Password',
-                    color: primaryColor,
-                    fontSize: 25.sp,
-                    fontWeight: FontWeight.bold,
-                  )),
-                  SizedBox(height: 30.h),
+                  SizedBox(height: 50.h),
                   CustomText(
                       maxLines: 2,
                       text:

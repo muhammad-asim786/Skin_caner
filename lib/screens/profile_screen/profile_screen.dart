@@ -70,18 +70,17 @@ class ProfileScreen extends StatelessWidget {
                         }
                       },
                       child: SizedBox(
-                        height: 30.h,
+                        height: 20.h,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             CustomText(
                                 text: model.profileText[index],
-                                fontSize: 14.sp,
+                                fontSize: 12.sp,
                                 color: blackColor.withOpacity(0.6),
                                 fontWeight: FontWeight.w500),
                             Icon(Icons.arrow_forward_ios,
-                                size: 15.sp,
-                                color: primaryColor.withOpacity(0.6))
+                                size: 12.sp, color: blackColor.withOpacity(0.6))
                           ],
                         ),
                       ),
