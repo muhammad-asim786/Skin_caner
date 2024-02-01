@@ -22,67 +22,71 @@ class SignInScreen extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 50.w),
-        child: Column(
-          children: [
-            SizedBox(height: 80.h),
-            Center(
-              child: CustomText(
-                text: 'Login to your account',
-                fontSize: 25.sp,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 80.h),
-            const FadeAnimation(0.7, CustomTextField(hintText: 'Email')),
-            SizedBox(height: 60.h),
-            const FadeAnimation(0.7, CustomTextField(hintText: 'Password')),
-            SizedBox(height: 20.h),
-            GestureDetector(
-              onTap: () => Get.to(() => const ForgotpasswordScreen()),
-              child: Align(
-                alignment: Alignment.bottomRight,
-                child: CustomText(
-                  color: primaryColor,
-                  text: 'Forgot Password?',
-                  fontSize: 12.sp,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ),
-            SizedBox(height: 60.h),
-            FadeAnimation(
-                0.1,
-                DefaultButton(
-                    text: 'Log in',
-                    onPressed: () => Get.to(() => const HomeScreen()))),
-            SizedBox(height: 60.h),
-            CustomText(
-              text: 'or login using ',
-              fontSize: 12.sp,
-              fontWeight: FontWeight.w500,
-              color: blackColor.withOpacity(0.5),
-            ),
-            SizedBox(height: 50.h),
-            FadeAnimation(
-              0.9,
-              ContainerRowWithShadowedImages(
-                  onFacebookTab: () {}, onGoogleTab: () {}),
-            ),
-            Expanded(
-              child: Align(
-                alignment: Alignment.bottomCenter,
-                child: InkWell(
-                  onTap: () => Get.to(() => const SignInUpScreen()),
-                  child: const CustomTextWihtAccount(
-                    text: 'Don’t have an account? ',
-                    text2: 'Register Now',
+        child: CustomScrollView(slivers: [
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              children: [
+                SizedBox(height: 80.h),
+                Center(
+                  child: CustomText(
+                    text: 'Login to your account',
+                    fontSize: 25.sp,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-              ),
+                SizedBox(height: 80.h),
+                const FadeAnimation(0.7, CustomTextField(hintText: 'Email')),
+                SizedBox(height: 60.h),
+                const FadeAnimation(0.7, CustomTextField(hintText: 'Password')),
+                SizedBox(height: 20.h),
+                GestureDetector(
+                  onTap: () => Get.to(() => const ForgotpasswordScreen()),
+                  child: Align(
+                    alignment: Alignment.bottomRight,
+                    child: CustomText(
+                      color: primaryColor,
+                      text: 'Forgot Password?',
+                      fontSize: 12.sp,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 60.h),
+                FadeAnimation(
+                    0.1,
+                    DefaultButton(
+                        text: 'Log in',
+                        onPressed: () => Get.to(() => const HomeScreen()))),
+                SizedBox(height: 60.h),
+                CustomText(
+                  text: 'or login using ',
+                  fontSize: 12.sp,
+                  fontWeight: FontWeight.w500,
+                  color: blackColor.withOpacity(0.5),
+                ),
+                SizedBox(height: 50.h),
+                FadeAnimation(
+                  0.9,
+                  ContainerRowWithShadowedImages(
+                      onFacebookTab: () {}, onGoogleTab: () {}),
+                ),
+                const Spacer(),
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: InkWell(
+                    onTap: () => Get.to(() => const SignInUpScreen()),
+                    child: const CustomTextWihtAccount(
+                      text: 'Don’t have an account? ',
+                      text2: 'Register Now',
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20.h),
+              ],
             ),
-            SizedBox(height: 20.h),
-          ],
-        ),
+          )
+        ]),
       ),
     );
   }

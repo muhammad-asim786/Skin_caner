@@ -19,12 +19,12 @@ class BodySktechScreen extends StatelessWidget {
               children: [
                 Image.asset(
                   !model.isFront ? skletonBackImage : skletonFrontImage,
-                  height: 400,
+                  height: 400.h,
                   fit: BoxFit.cover,
                 ),
                 Container(
-                  height: 40,
-                  width: 200,
+                  height: 40.h,
+                  width: 200.w,
                   decoration: BoxDecoration(
                       border: Border.all(color: blackColor, width: 1),
                       color: Colors.transparent,

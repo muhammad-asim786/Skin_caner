@@ -2,6 +2,8 @@ import 'package:canecer_scan/core/constant/image.dart';
 import 'package:flutter/material.dart';
 
 class LanguagesModel extends ChangeNotifier {
+  int index = 0;
+  String selectedLanguage = 'English';
   // Add your code here
   List<String> languagesText = [
     'English',
@@ -23,4 +25,10 @@ class LanguagesModel extends ChangeNotifier {
     franceFlag,
     russFlag,
   ];
+
+  void changeIndex(int newIndex) {
+    index = newIndex;
+    selectedLanguage = languagesText[index];
+    notifyListeners();
+  }
 }
